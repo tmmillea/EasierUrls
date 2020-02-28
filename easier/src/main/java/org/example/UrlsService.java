@@ -1,5 +1,7 @@
 package org.example;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import javax.ws.rs.*;
@@ -8,16 +10,16 @@ import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
  * Root resource (exposed at "easier" path)
  */
-@Path("urls")
+@Path("/")
 public class UrlsService {
 
-    private static HashMap<String, SmallUrlData> urlMap = new HashMap<>();
+    private static LinkedHashMap<String, SmallUrlData> urlMap = new LinkedHashMap<>();
     private static long pathValue = 0;
 
     /**
@@ -27,7 +29,7 @@ public class UrlsService {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public SmallUrlList urlList() {
+    public Response urlList() {
         List<SmallUrl> smallUrlList = new ArrayList<>(urlMap.size());
         for(String urlPath : urlMap.keySet()) {
             SmallUrl smallUrl = new SmallUrl();
@@ -38,7 +40,14 @@ public class UrlsService {
         }
         SmallUrlList jsonList = new SmallUrlList();
         jsonList.setSmallUrlList(smallUrlList);
-        return jsonList;
+        ObjectMapper om = new ObjectMapper();
+        String json;
+        try {
+            json = om.writeValueAsString(jsonList);
+        } catch(JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+        return Response.ok().entity(json).build();
     }
 
     @GET
@@ -59,6 +68,7 @@ public class UrlsService {
             urlMap.remove(urlPath);
         } else {
             targetData.setRemaining(remaining);
+            urlMap.put(urlPath, targetData);
         }
         return Response.temporaryRedirect(destinationURI).build();
     }
@@ -81,5 +91,11 @@ public class UrlsService {
         data.setRemaining(10);
         urlMap.put(newPath, data);
         return Response.status(Response.Status.ACCEPTED).entity(newPath).build();
+    }
+
+    @DELETE
+    public Response clean() {
+        urlMap.clear();
+        return Response.ok().build();
     }
 }

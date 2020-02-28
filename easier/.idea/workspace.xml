@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beb5dbf1-f119-4560-a086-98fdeb0f7497" name="Default Changelist" comment="" />
+    <list default="true" id="beb5dbf1-f119-4560-a086-98fdeb0f7497" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UrlsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UrlsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/UrlsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/UrlsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/UrlsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/UrlsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/UrlsServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/example/UrlsServiceTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +22,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1YJVFpZ1roMX8KyjgRnVMMr2yiG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,9 +41,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UrlsServiceTest">
     <configuration name="UrlsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="easier" />
       <extension name="coverage">
@@ -40,6 +60,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mvn" />
+                <option value="exec:java" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="easier [exec:java]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="exec:java" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.UrlsServiceTest" />
+      <item itemvalue="Maven.easier [exec:java]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UrlsServiceTest" />
@@ -60,6 +135,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="204" y="81" width="1071" height="765" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582833340876">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="204" y="81" width="1071" height="765" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.823@0.23.1440.823" timestamp="1582833340876" />
     <state x="130" y="160" width="1200" height="584" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1582759587301">
       <screen x="0" y="23" width="1440" height="821" />
     </state>
@@ -72,42 +151,54 @@
       <screen x="0" y="23" width="1440" height="824" />
     </state>
     <state x="380" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.824@0.23.1440.824" timestamp="1582692151196" />
-    <state width="1356" height="200" key="GridCell.Tab.0.bottom" timestamp="1582765151834">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state x="503" y="187" key="#xdebugger.evaluate" timestamp="1582843697890">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="503" y="187" key="#xdebugger.evaluate/0.23.1440.823@0.23.1440.823" timestamp="1582843697890" />
+    <state width="1356" height="200" key="GridCell.Tab.0.bottom" timestamp="1582848574039">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="200" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1582765151834" />
+    <state width="1356" height="200" key="GridCell.Tab.0.bottom/0.23.1440.823@0.23.1440.823" timestamp="1582848574039" />
     <state width="1358" height="200" key="GridCell.Tab.0.bottom/0.23.1440.824@0.23.1440.824" timestamp="1582695032063" />
-    <state width="1356" height="200" key="GridCell.Tab.0.center" timestamp="1582765151833">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state width="1356" height="200" key="GridCell.Tab.0.center" timestamp="1582848574039">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="200" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1582765151833" />
+    <state width="1356" height="200" key="GridCell.Tab.0.center/0.23.1440.823@0.23.1440.823" timestamp="1582848574039" />
     <state width="1358" height="200" key="GridCell.Tab.0.center/0.23.1440.824@0.23.1440.824" timestamp="1582695032062" />
-    <state width="1356" height="200" key="GridCell.Tab.0.left" timestamp="1582765151832">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state width="1356" height="200" key="GridCell.Tab.0.left" timestamp="1582848574038">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="200" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1582765151832" />
+    <state width="1356" height="200" key="GridCell.Tab.0.left/0.23.1440.823@0.23.1440.823" timestamp="1582848574038" />
     <state width="1358" height="200" key="GridCell.Tab.0.left/0.23.1440.824@0.23.1440.824" timestamp="1582695032056" />
-    <state width="1356" height="200" key="GridCell.Tab.0.right" timestamp="1582765151833">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state width="1356" height="200" key="GridCell.Tab.0.right" timestamp="1582848574039">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="200" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1582765151833" />
+    <state width="1356" height="200" key="GridCell.Tab.0.right/0.23.1440.823@0.23.1440.823" timestamp="1582848574039" />
     <state width="1358" height="200" key="GridCell.Tab.0.right/0.23.1440.824@0.23.1440.824" timestamp="1582695032062" />
-    <state width="1356" height="248" key="GridCell.Tab.1.bottom" timestamp="1582764991978">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state width="1356" height="207" key="GridCell.Tab.1.bottom" timestamp="1582843739401">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="248" key="GridCell.Tab.1.bottom/0.23.1440.821@0.23.1440.821" timestamp="1582764991978" />
-    <state width="1356" height="248" key="GridCell.Tab.1.center" timestamp="1582764991977">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state width="1356" height="207" key="GridCell.Tab.1.bottom/0.23.1440.823@0.23.1440.823" timestamp="1582843739401" />
+    <state width="1356" height="207" key="GridCell.Tab.1.center" timestamp="1582843739400">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="248" key="GridCell.Tab.1.center/0.23.1440.821@0.23.1440.821" timestamp="1582764991977" />
-    <state width="1356" height="248" key="GridCell.Tab.1.left" timestamp="1582764991976">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state width="1356" height="207" key="GridCell.Tab.1.center/0.23.1440.823@0.23.1440.823" timestamp="1582843739400" />
+    <state width="1356" height="207" key="GridCell.Tab.1.left" timestamp="1582843739400">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="248" key="GridCell.Tab.1.left/0.23.1440.821@0.23.1440.821" timestamp="1582764991976" />
-    <state width="1356" height="248" key="GridCell.Tab.1.right" timestamp="1582764991977">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state width="1356" height="207" key="GridCell.Tab.1.left/0.23.1440.823@0.23.1440.823" timestamp="1582843739400" />
+    <state width="1356" height="207" key="GridCell.Tab.1.right" timestamp="1582843739400">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state width="1356" height="248" key="GridCell.Tab.1.right/0.23.1440.821@0.23.1440.821" timestamp="1582764991977" />
+    <state width="1356" height="207" key="GridCell.Tab.1.right/0.23.1440.823@0.23.1440.823" timestamp="1582843739400" />
     <state x="268" y="116" key="Maven.ArtifactSearchDialog" timestamp="1582692802052">
       <screen x="0" y="23" width="1440" height="824" />
     </state>
@@ -125,19 +216,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/UrlsService.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/example/UrlsServiceTest.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/UrlsService.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/UrlsService.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="6" />
+          <line>77</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
