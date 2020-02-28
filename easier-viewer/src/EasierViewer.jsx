@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
@@ -29,13 +29,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function UrlInput(props) {
-  const {classes, url, setUrl, submit} = props;
+  const {classes, url, setUrl, error, submit} = props;
   const handleChange = (event) => {
     setUrl(event.target.value);
   }
   return (
     <div className={classes.root}>
-      <TextField className={classes.field} value={url} id="urlInput" label="Url Input" onChange={handleChange}/>
+      <TextField error={error} className={classes.field} value={url} id="urlInput" label="Url Input" onChange={handleChange}/>
       <Button variant="contained" color="primary" onClick={submit}>Create Url</Button>
     </div>
   );
@@ -45,6 +45,25 @@ function EasierViewer() {
   const classes = useStyles();
   const [url, setUrl] = React.useState("");
   const [links, setLinks] = React.useState([]);
+  const [error, setError] = React.useState(false);
+
+  const loadLinks = () => {
+    fetch(rootUrl).then((response) => response.json().then((jsonData) => {
+      const smallUrlList = jsonData.smallUrlList;
+      const newLinks = [];
+      smallUrlList.map((urlData) => {
+        newLinks.push([rootUrl + urlData.urlPath, urlData.data.target]);
+      });
+      setLinks(newLinks);
+    }).catch(() => {
+      setLinks([]);
+      setError(true);
+    }));
+  }
+
+  useEffect(() => {
+    loadLinks();
+  }, [links]);
 
     const submit = () => {
       const init = {
@@ -54,20 +73,14 @@ function EasierViewer() {
           'Access-Control-Allow-Origin': '*',
         }
       };
-      console.log(url);
       fetch(rootUrl, init)
         .then((response) => {
           if(response.ok) {
-            response.text().then((text) => {
-              const path = text;
-              const newLinks = Object.assign([], links);
-              newLinks.push([
-                rootUrl + path,
-                url,
-              ]);
-              setLinks(newLinks);
-              setUrl("");
-            });
+            loadLinks();
+            setError(false);
+            setUrl("");
+          } else {
+            setError(true);
           }
         })
     }    
@@ -80,6 +93,7 @@ function EasierViewer() {
           url={url}
           setUrl={setUrl}
           submit={submit}
+          error={error}
         />  
         <TableContainer>
           <Table className={classes.table}>
