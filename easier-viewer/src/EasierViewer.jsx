@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
@@ -61,7 +61,7 @@ function EasierViewer() {
     }));
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     loadLinks();
   }, [links]);
 

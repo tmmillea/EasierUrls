@@ -1,11 +1,6 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import toJson from 'enzyme-to-json';
 import EasierViewer from './EasierViewer';
-
-Enzyme.configure({adapter: new Adapter()})
 const {act} = TestRenderer;
 test('empty snapshot', () => {
   const render = TestRenderer.create(<EasierViewer/>);
@@ -38,10 +33,10 @@ test('Initialized', async () => {
     },]
   };
   fetchMock.mockResponse(JSON.stringify(urlList));
-  const wrapper = Enzyme.mount(<EasierViewer/>);
-  act(() => {
-    wrapper.update();
+  let wrapper;
+  await act(() => {
+    wrapper = TestRenderer.create(<EasierViewer/>);
   })
-  expect(toJson(wrapper)).toMatchSnapshot();
+  expect(wrapper.toJSON()).toMatchSnapshot();
   wrapper.unmount();
 });
